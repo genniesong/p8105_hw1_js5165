@@ -46,7 +46,19 @@ as.numeric(as.character(p1_df$vec_factor))
 
 The character variable can be finally converted to numeric variable; but the logical variable cannot be converted to numeric variable if first converted to character variable.
 
+##Problem 2 
+```{r problem2}
+set.seed(0921)
+p2_df = tibble(
+  x = rnorm(1000),
+  y = rnorm(1000),
+  vec_logical = x + y > 0，
+  vec_numeric = as.numeric(vec_logical),
+  vec_factor = as.factor(vec_logical)
+)
+p2_df
 
+```
 
 
 
