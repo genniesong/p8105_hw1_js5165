@@ -28,6 +28,7 @@ mean(p1_df$vec_factor)
 ```
 I can get the mean of numeric and logical variables, but not characer or factor ones.
 
+###Problem 1 Convert 1 
 ```{r problem1_convert1, result = 'hide'}
 
 as.numeric(p1_df$vec_logical)
@@ -37,8 +38,13 @@ as.numeric(p1_df$vec_factor)
 
 Logical and factor variables can be converted to numeric variables, but character variable can be converted.
 
+###Problem 1 Convert 2 
+```{r problem1_convert2}
+as.numeric(as.factor(p1_df$vec_char))
+as.numeric(as.character(p1_df$vec_factor))
+```
 
-
+The character variable can be finally converted to numeric variable; but the logical variable cannot be converted to numeric variable if first converted to character variable.
 
 
 
