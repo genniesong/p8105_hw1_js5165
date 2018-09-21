@@ -60,6 +60,9 @@ p2_df
 
 ```
 
+The dataset is a `r nrow(p2_df)` by `r ncol(p2_df)` table; 
+the mean of x is `r mean(p2_df$x)`; the median of x is `r median(p2_df$x)`; 
+the proportion of cases for which the logical vector is TRUE is `r sum(p2_df$vec_logical)/1000*100`%.
 
 
 
