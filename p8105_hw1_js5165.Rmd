@@ -64,7 +64,15 @@ The dataset is a `r nrow(p2_df)` by `r ncol(p2_df)` table;
 the mean of x is `r mean(p2_df$x)`; the median of x is `r median(p2_df$x)`; 
 the proportion of cases for which the logical vector is TRUE is `r sum(p2_df$vec_logical)/1000*100`%.
 
+###Problem 2 plot
+```{r problem2_plot}
 
+ggplot(p2_df, aes(x = x, y = y, color = p2_df$vec_logical)) + geom_point()
+ggsave("scatter_plot.pdf", height = 4, width = 6)
+ggplot(p2_df, aes(x = x, y = y, color = p2_df$vec_numeric)) + geom_point()
+ggplot(p2_df, aes(x = x, y = y, color = p2_df$vec_factor)) + geom_point()
+
+```
 
 
 
