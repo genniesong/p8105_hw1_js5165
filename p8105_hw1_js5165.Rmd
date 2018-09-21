@@ -67,10 +67,11 @@ the proportion of cases for which the logical vector is TRUE is `r sum(p2_df$vec
 ###Problem 2 plot
 ```{r problem2_plot}
 
-ggplot(p2_df, aes(x = x, y = y, color = p2_df$vec_logical)) + geom_point()
-ggsave("scatter_plot.pdf", height = 4, width = 6)
+plot1 = ggplot(p2_df, aes(x = x, y = y, color = p2_df$vec_logical)) + geom_point()
+plot1
 ggplot(p2_df, aes(x = x, y = y, color = p2_df$vec_numeric)) + geom_point()
 ggplot(p2_df, aes(x = x, y = y, color = p2_df$vec_factor)) + geom_point()
+ggsave("scatter_plot.pdf", plot1, height = 4, width = 6)
 
 ```
 
